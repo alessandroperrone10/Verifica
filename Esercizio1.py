@@ -4,11 +4,13 @@
 
 
 class GestoreListe:
+    #Inizializzo le liste
     def __init__(self):
         self.lista_numeri = []
         self.lista_float = []
         self.lista_stringhe = []
 
+    #Metodo per aggiungere il dato alla lista
     def aggiungi_dato(self):
         print("Che tipo di dato vuoi inserire?")
         print("1. Numero intero")
@@ -31,6 +33,7 @@ class GestoreListe:
         else:
             print("Opzione non valida! Scegli correttamente.")
 
+    #Metodo per stampare la lista
     def stampa_lista(self):
         print("Quale lista vuoi stampare?:")
         print("Digita 1 per la lista dei numeri")
@@ -50,14 +53,16 @@ class GestoreListe:
         else:
             print("Tipo di lista non riconosciuto.")
 
+
 # Utilizzo dell'oggetto GestoreListe
 gestore = GestoreListe()
 
+#Loop per consentire all'utente di inserire quanti dati vuole
 while True:
     gestore.aggiungi_dato()
     continuare = input("Vuoi inserire un altro dato? (si/no): ").lower()
     if continuare != "si":
         break
 
-
+#Richiamo metodo per stampare la lista
 gestore.stampa_lista()
