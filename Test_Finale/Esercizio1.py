@@ -1,3 +1,5 @@
+
+#Creazione della classe libro
 class Libro:
     def __init__(self, titolo, autore, anno, quantita):
         self.titolo = titolo
@@ -12,7 +14,7 @@ class Libro:
         print(f"Quantità: {self.quantita}\n")
 
 
-
+#Creazione delle classe libreria
 class Libreria:
     def __init__(self):
         self.libri = {}
@@ -87,6 +89,7 @@ class Libreria:
             print("Libro non trovato!")
 
 
+#Menu con loop
 def main():
     libreria = Libreria()
 
